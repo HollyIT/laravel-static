@@ -2,10 +2,10 @@
 
 namespace HollyIT\LaravelStatic\Tests;
 
-use HollyIT\LaravelStatic\RequiredLibraries;
 use Illuminate\Support\Facades\Event;
 use HollyIT\LaravelStatic\AssetLibrary;
 use HollyIT\LaravelStatic\StaticRepository;
+use HollyIT\LaravelStatic\RequiredLibraries;
 use Orchestra\Testbench\TestCase as Orchestra;
 use HollyIT\LaravelStatic\LaravelStaticServiceProvider;
 use HollyIT\LaravelStatic\Contracts\DriverDefinesRoutes;

@@ -5,7 +5,6 @@ namespace HollyIT\LaravelStatic\Tests\Feature;
 use Illuminate\Support\Facades\Event;
 use HollyIT\LaravelStatic\AssetLibrary;
 use HollyIT\LaravelStatic\Tests\TestCase;
-use HollyIT\LaravelStatic\RequiredLibraries;
 
 class LibraryRegistrationTest extends TestCase
 {
@@ -39,6 +38,4 @@ class LibraryRegistrationTest extends TestCase
             'extra2',
         ], $this->repository->require('admin-theme'));
     }
-
-
 }

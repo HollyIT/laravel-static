@@ -7,7 +7,6 @@ use HollyIT\LaravelStatic\Tests\TestCase;
 
 class RequireWithTest extends TestCase
 {
-
     protected function setUp(): void
     {
         parent::setUp();
@@ -17,7 +16,8 @@ class RequireWithTest extends TestCase
     /** @test * */
     public function it_injects_when_required_with_is_set()
     {
-        $this->repository->add(AssetLibrary::create('admin-child')
+        $this->repository->add(
+            AssetLibrary::create('admin-child')
             ->withJs('admin-child.js')
             ->requireWith('admin-theme')
         );

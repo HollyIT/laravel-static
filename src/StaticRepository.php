@@ -47,7 +47,7 @@ class StaticRepository
 
     public function findFromPath($pathName): ?AssetLibrary
     {
-        return $this->libraries->first(fn(AssetLibrary $library) => Str::kebab($library->getName()) === $pathName);
+        return $this->libraries->first(fn (AssetLibrary $library) => Str::kebab($library->getName()) === $pathName);
     }
 
     /**
@@ -73,7 +73,9 @@ class StaticRepository
      */
     public function getRequiredWithsFor(AssetLibrary $library): Collection
     {
-        return $this->libraries->filter(fn(AssetLibrary $otherLibrary) => in_array($library->getName(),
-            $otherLibrary->getRequiredWith()));
+        return $this->libraries->filter(fn (AssetLibrary $otherLibrary) => in_array(
+            $library->getName(),
+            $otherLibrary->getRequiredWith()
+        ));
     }
 }

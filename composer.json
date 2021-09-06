@@ -1,6 +1,16 @@
 {
     "name": "hollyit/laravel-static",
-    "description": "",
+    "description": "Management for static resources in your Laravel project",
+    "homepage": "https://github.com/HollyIT/laravel-static",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jamie Holly",
+            "email": "jamie@hollyit.net",
+            "homepage": "https://hollyit.net",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": "^8.0",
         "ext-json": "*"

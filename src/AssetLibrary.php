@@ -19,6 +19,7 @@ class AssetLibrary
      */
     protected $renderJsCallback;
     protected $renderCssCallback;
+
     /**
      * @param  string  $name
      */
@@ -46,7 +47,7 @@ class AssetLibrary
 
     public function withCss(string $file, array $options = []): static
     {
-        if (!array_key_exists('rel', $options)) {
+        if (! array_key_exists('rel', $options)) {
             $options['rel'] = 'stylesheet';
         }
         $this->css[$file] = $options;
@@ -54,16 +55,19 @@ class AssetLibrary
         return $this;
     }
 
-    public function renderJsWith(callable | string | null $callbackOrView): static {
+    public function renderJsWith(callable | string | null $callbackOrView): static
+    {
         $this->renderJsCallback = $callbackOrView;
+
         return $this;
     }
 
-    public function renderCssWith(callable | string | null $callbackOrView): static {
+    public function renderCssWith(callable | string | null $callbackOrView): static
+    {
         $this->renderCssCallback = $callbackOrView;
+
         return $this;
     }
-
 
     public function publicPath(string $path): static
     {
@@ -95,6 +99,7 @@ class AssetLibrary
     {
         $requiredWith = is_array($requiredWith) ? $requiredWith : [$requiredWith];
         $this->requiredWith = $requiredWith;
+
         return $this;
     }
 
@@ -105,8 +110,6 @@ class AssetLibrary
     {
         return $this->requiredWith;
     }
-
-
 
     public function getJs(): array
     {
@@ -147,11 +150,13 @@ class AssetLibrary
             if (is_callable($this->renderJsCallback)) {
                 return call_user_func($this->renderJsCallback, $lines, $this);
             }
+
             return (string) view($this->renderJsCallback, [
                 'scripts' => $lines,
-                'library' => $this
+                'library' => $this,
             ]);
         }
+
         return $lines;
     }
 
@@ -166,11 +171,13 @@ class AssetLibrary
             if (is_callable($this->renderCssCallback)) {
                 return call_user_func($this->renderCssCallback, $lines, $this);
             }
+
             return (string) view($this->renderCssCallback, [
                 'links' => $lines,
-                'library' => $this
+                'library' => $this,
             ]);
         }
+
         return $lines;
     }
 
