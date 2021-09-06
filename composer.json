@@ -1,0 +1,46 @@
+{
+    "name": "hollyit/laravel-static",
+    "description": "",
+    "require": {
+        "php": "^8.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.3",
+        "orchestra/testbench": "^5.0|^6.0",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "illuminate/bus": "^8.0",
+        "illuminate/console": "^8.0",
+        "illuminate/database": "^8.0",
+        "illuminate/pipeline": "^8.0",
+        "illuminate/support": "^8.0",
+        "league/flysystem": "^1.0.64",
+        "symfony/console": "^4.4|^5.0",
+        "phpunit/phpunit": "^9.3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "HollyIT\\LaravelStatic\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HollyIT\\LaravelStatic\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HollyIT\\LaravelStatic\\LaravelStaticServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/testbench package:test --parallel --no-coverage",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "cs-fixer": "php-cs-fixer fix"
+    }
+}
