@@ -24,4 +24,4 @@ The file resolver is what determines the URLs for your static assets. There are 
 
 This is how you require your libraries and render them out in your Blade templates. In your controller you create a new RequiredLibraries, adding in any libraries you need and then passing it to your view for rendering.
 
-
+Next up: [Getting started](getting-started.md)

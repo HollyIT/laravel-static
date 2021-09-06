@@ -63,5 +63,5 @@ _layout.blade.php_
 
 This is the basics of getting things going, but it won't work yet. Continue on to the next section about file resolvers to see how to make it all work.
 
-
+Next up: [File Resolvers](file-resolvers.md)
 
