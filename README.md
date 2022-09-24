@@ -1,5 +1,7 @@
 # Laravel Static
 
+This package has been archived and is now replaced by [hollyit/larave-static-libraries](https://github.com/HollyIT/laravel-static-libraries).
+
 
 An extensible, eloquent way to manage static assets, such as javascript and stylesheets for your projects.
 
